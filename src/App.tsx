@@ -1,16 +1,29 @@
-import Modal from "./components/Modal";
+import { NewTransactionModal } from "./components/NewTransactionModal";
 import Nav from "./components/Nav";
-import styles from "./styles/app.module.scss";
-import "./styles/global.scss";
-import { useMenu } from "./context/contex";
+import "./styles/global.ts";
+import { useState } from "react";
+import React from "react";
+import { GlobalStyle } from "./styles/global";
 
 function App() {
-  const { isAdding } = useMenu();
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
+    useState(false);
 
+  function handleOpenNewTransactionModal() {
+    setIsNewTransactionModalOpen(true);
+  }
+
+  function handleCloseNewTransactionModal() {
+    setIsNewTransactionModalOpen(false);
+  }
   return (
-    <div className={styles.wrapper}>
-      <Nav />
-      {isAdding ? <Modal /> : ""}
+    <div>
+      <Nav onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <NewTransactionModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      />
+      <GlobalStyle />
     </div>
   );
 }
