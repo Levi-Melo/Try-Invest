@@ -3,13 +3,14 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     :root{
         --background: #0D0D0D;
+        --section: #181818;
         --shape: #FFFFFF;
 
         --text-body:#969CB3;
         --text-title:#FFFFFF;
         
         --red:#E62E4D;
-        --green:#33CC95;
+        --green:#1DB954;
         --blue:#5429CC;
         --blue-light:#6933FF;
     }
@@ -73,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
         width:100%;
         max-width:546px;
 
-        background:var(--background);
+        background:var(--section);
         padding:3rem;
 
         position:relative;
@@ -82,8 +83,8 @@ export const GlobalStyle = createGlobalStyle`
 
     .react-modal-close{
         position:absolute;
-        right:1.5rem;
-        top:1.5rem;
+        right:1rem;
+        top:1rem;
         border:0;
         background:transparent;
 

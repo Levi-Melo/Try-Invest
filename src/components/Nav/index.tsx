@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import { Container } from "./styles";
 import circleAdd from "../../assets/add.svg";
 interface HeaderProps {
   onOpenNewTransactionModal: () => void;
@@ -6,10 +6,10 @@ interface HeaderProps {
 
 export default function Nav(props: HeaderProps) {
   return (
-    <div className={styles.navMenu}>
+    <Container>
       <button type="button" onClick={props.onOpenNewTransactionModal}>
-        <img className={styles.addButton} src={circleAdd} alt="adicionar" />
+        <img className="addButton" src={circleAdd} alt="adicionar" />
       </button>
-    </div>
+    </Container>
   );
 }

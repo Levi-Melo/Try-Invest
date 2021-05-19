@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import Modal from "react-modal";
 
 import closeImg from "../../assets/close.svg";
+import confirmImg from "../../assets/confirm.svg";
 
 import { Container } from "./styles";
 
@@ -44,7 +45,7 @@ export function NewTransactionModal({
       <Container onSubmit={handleCreateNewTransaction}>
         <h2>Nova transação</h2>
         <input
-          placeholder="id"
+          placeholder="id:"
           type="text"
           value={id}
           onChange={(event) => setId(event.target.value)}
@@ -56,13 +57,15 @@ export function NewTransactionModal({
           onChange={(event) => setName(event.target.value)}
         />
         <input
-          placeholder="Descrição"
+          placeholder="Descrição:"
           type="text"
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">
+          <img src={confirmImg} alt="Cadastrar" />
+        </button>
       </Container>
     </Modal>
   );
