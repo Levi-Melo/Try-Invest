@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         --text-title:#FFFFFF;
         
         --red:#E62E4D;
-        --green:#1DB954;
+        --yellow:#ebb417;
         --blue:#5429CC;
         --blue-light:#6933FF;
     }
@@ -50,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
         
     }
     .closeButton{
-      width:22px;
+      width:18px;
     }
 
     [disabled]{
@@ -72,7 +72,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     .react-modal-content{
         width:100%;
-        max-width:546px;
+        max-width:406px;
 
         background:var(--section);
         padding:3rem;

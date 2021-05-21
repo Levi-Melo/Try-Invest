@@ -64,6 +64,7 @@ export function NewTransactionModal({
         />
 
         <button type="submit">
+          <span>Cadastrar</span>
           <img src={confirmImg} alt="Cadastrar" />
         </button>
       </Container>
